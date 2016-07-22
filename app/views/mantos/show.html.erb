@@ -1,0 +1,34 @@
+<div class="container"> 
+<div class="jumbotron">
+        <h1>ようこそ<%= @user.nickname %>さん</h1>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>あなたの手持ちは<%= @mantos.mantos %>Mantoです。 </h2>
+        </div>
+        <div class="col-lg-4">
+          <h2>あなたの手持ちは<%= @mantos.eart_money%>Eart moneyです</h2>
+       </div>
+
+<div class="contents row">
+  <%= form_for @mantos do |f| %>
+          <div style="margin: 8px 0">
+            <%= f.label :manto, style: { 'margin-right' => 8 } %>
+            <%= f.text_field :manto, placeholder: '数字', value: '' %> *半角英数で入力してください。*減らす時は「ー」を最初に入れてください
+          </div>
+          <div style="margin: 8px 0">
+            <%= f.label :eart_money, style: { 'margin-right' => 8 } %>
+            <%= f.text_field :eart_money, placeholder: '数字', value: '' %> 
+          </div>
+          <div class="row">
+            <div class="col10 push1">
+              <%= button_tag type: "submit", class: "btn btn--block" do %>確定<i class="icon-arrow-right"></i>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+</div>
+
+

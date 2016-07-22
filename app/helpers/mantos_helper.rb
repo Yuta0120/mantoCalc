@@ -1,0 +1,2 @@
+module MantosHelper
+end
